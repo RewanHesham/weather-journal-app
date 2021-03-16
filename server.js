@@ -36,6 +36,7 @@ app.get('/all' , (req , res) => {
 });
 
 // POST Route
+// Callback function to post the data from user to the server route 
 app.post('/postData', (req,res) => {
     console.log(req.body);
     projectData = {
