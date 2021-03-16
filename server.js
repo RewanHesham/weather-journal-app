@@ -36,7 +36,7 @@ app.get('/all' , (req , res) => {
 });
 
 // POST Route
-// Callback function to post the data from user to the server route 
+// Callback function to create a new entry in the apps endpoint (projectsData) consisting of the data received from the client side POST. 
 app.post('/postData', (req,res) => {
     console.log(req.body);
     projectData = {
