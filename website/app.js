@@ -9,12 +9,16 @@ const apiKey  = ",us&units=metric&appid=10848613b51c2bf8be9b2c05472c8692";
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
 let timeNow = d.getHours()+':'+ d.getMinutes()+':'+ d.getSeconds();
 
 /* Main Finctions */
 /* Function called by event listener */
 function updateData (){
+    if(zipInput.value==''){
+        alert('Please Enter ZIP Code');
+        return false;
+    };
     getData().then(function(data){
         postData('/postData',{
             date:newDate, 
