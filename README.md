@@ -22,12 +22,13 @@
       *The file includes changes to cope with the changes in HTML layout of the added fields and setting the layout of the classes.
       
    ###Two JavaScripts files including:
+   
    ####app.js:
      
         *The global variables used in the code.
-        *All the main functions ( 'updateData' the function of the event listener- 'getData' function to GET Web API Data from OpenWeather website- 
-	 'postData' function to POST datato the client server to help the updateUI function while getting the data and showing it to user- 'updateUI' 
-	  function to GET Project Data and update it to the user).
+        *All the main functions ( 'updateData' the function of the event listener- 'getData' asunc function to GET Web API Data from OpenWeather website- 
+	 'postData' async function to POST data to the app endpoint in anjs object to help the updateUI function while getting the data and showing it to 
+	  user- 'updateUI' async function to GET Project Data and update it to the user).
         *The event listeners ( Mouse click from the user on the 'Generate' button, which will fire the 'updateData' function;which get the zip code and
 	  feelings from the user and post the date, time,temp related to the users entry and the user's feelings).
 	 
@@ -35,6 +36,13 @@
    
          *Istall express(), Cors package and body-Parser package.
          *Require express(), and create an instance of the app using express.
+	 *Configuring express to use body-parser as middle-ware.
+	 *Require cors for cross origin allowance.
+	 *Initialize the main project folder.
+	 *Setup server port.
+	 *GET route setup on the server side with the first argument '/all', and the second argument a callback function to return 
+	  the JS object created at the top of server code.
+	 *POST route with a function which create a new entry in the apps endpoint (projectsData) consisting of the data received from the client side POST.
 	 
      
 
