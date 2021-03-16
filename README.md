@@ -12,19 +12,30 @@
   
   
 ## Table of Contents
-    ###HTML file:
-      *The file includes some changes from the original ( adding time Div to the enteryholderDiv - attaching the js file - adding footer).
-    ###CSS file:
+
+   ###HTML file:
+   
+       *The file includes some changes from the original ( adding time Div to the enteryholderDiv - attaching the js file - adding footer).
+       
+   ###CSS file:
+   
       *The file includes changes to cope with the changes in HTML layout of the added fields and setting the layout of the classes.
-    ###Two JavaScripts files including:
-     ####app.js:
+      
+   ###Two JavaScripts files including:
+   ####app.js:
+     
         *The global variables used in the code.
-        *All the main functions ( - scrolltoSection function to scroll to the selected section of the navigation menu -
-         on scroll () to detect the postion of the sections on view and add the active class to it).
-        *The event listeners ( Mouse click from the user on the navigation menu items, which will scroll down to it's section- scroll on the window 
-         to mark active section).
-     ####server.js:
-         *Setting Express() 
+        *All the main functions ( 'updateData' the function of the event listener- 'getData' function to GET Web API Data from OpenWeather website- 
+	 'postData' function to POST datato the client server to help the updateUI function while getting the data and showing it to user- 'updateUI' 
+	  function to GET Project Data and update it to the user).
+        *The event listeners ( Mouse click from the user on the 'Generate' button, which will fire the 'updateData' function;which get the zip code and
+	  feelings from the user and post the date, time,temp related to the users entry and the user's feelings).
+	 
+   ####server.js:
+   
+         *Istall express(), Cors package and body-Parser package.
+         *Require express(), and create an instance of the app using express.
+	 
      
 
 ## Used Languages
