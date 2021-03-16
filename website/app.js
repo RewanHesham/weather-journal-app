@@ -76,9 +76,3 @@ const updateUI = async ()=> {
         console.log("error" , error);
     };
 };
-
-//b3ml talab get lopen weather api
-//b3ml talab postData flserver bta3y
-//b3ml talab get llserver 3andy w25od ldata wzherha be tempNow.textContent 3ady
-
-//projectData = req.body;
