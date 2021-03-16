@@ -24,7 +24,7 @@ function updateData (){
             time:timeNow,
             temp:data.main.temp, 
             content:content.value,
-        })
+        });
         updateUI();
     });   
 };
@@ -66,13 +66,15 @@ const postData = async (url = '' , data ={}) => {
 
 /* Function to GET Project Data and update it to the user */
 const updateUI = async ()=> {
+    // Here i wait for the data on the route "/all" then update the object to user with the new data
     const updatedData = await fetch ("/all");
     console.log(updatedData);
     try{
         const weatherData = await updatedData.json();
+        // Here i set the values inside the object weatherData to the updated values 
         document.getElementById("date").innerHTML = 'Date : '+ weatherData.date;
         document.getElementById("time").innerHTML ='Time : ' + timeNow;
-        document.getElementById("temp").innerHTML = 'Temperature : ' + weatherData.temp + '°C';
+        document.getElementById("temp").innerHTML = 'Temperature : ' + weatherData.temp+ '°C';
         document.getElementById("content").innerHTML = 'Content : ' + weatherData.content;
     }catch(error){
         console.log("error" , error);
