@@ -10,7 +10,7 @@ const apiKey  = ",us&units=metric&appid=10848613b51c2bf8be9b2c05472c8692";
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
-let timeNow = d.getHours()+'.'+d.getMinutes();
+let timeNow = d.getHours()+':'+ d.getMinutes()+':'+ d.getSeconds();
 
 // Event listener to add function to existing HTML DOM element
 // This Event Listener is on the generate button to listen to a click then execute the updateData function
@@ -71,8 +71,8 @@ const updateUI = async ()=> {
     try{
         const weatherData = await updatedData.json();
         document.getElementById("date").innerHTML = 'Date : '+ weatherData.date;
-        document.getElementById("time").innerHTML ='Time : ' + weatherData.time;
-        document.getElementById("temp").innerHTML = 'Temperature : ' + weatherData.temp+ '°C';
+        document.getElementById("time").innerHTML ='Time : ' + timeNow;
+        document.getElementById("temp").innerHTML = 'Temperature : ' + weatherData.temp + '°C';
         document.getElementById("content").innerHTML = 'Content : ' + weatherData.content;
     }catch(error){
         console.log("error" , error);
