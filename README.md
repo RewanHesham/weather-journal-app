@@ -13,7 +13,7 @@
   
 ## Table of Contents
 
-   ###HTML file:
+###HTML file:
    
        *The file includes some changes from the original ( adding time Div to the enteryholderDiv - attaching the js file - adding footer).
        
