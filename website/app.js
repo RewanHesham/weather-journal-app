@@ -12,10 +12,7 @@ let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 let timeNow = d.getHours()+':'+ d.getMinutes()+':'+ d.getSeconds();
 
-// Event listener to add function to existing HTML DOM element
-// This Event Listener is on the generate button to listen to a click then execute the updateData function
-btn.addEventListener("click" , updateData);
-
+/* Main Finctions */
 /* Function called by event listener */
 function updateData (){
     getData().then(function(data){
@@ -80,3 +77,7 @@ const updateUI = async ()=> {
         console.log("error" , error);
     };
 };
+
+// Event listener to add function to existing HTML DOM element
+// This Event Listener is on the generate button to listen to a click then execute the updateData function
+btn.addEventListener("click" , updateData);
