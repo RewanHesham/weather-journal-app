@@ -13,17 +13,17 @@
   
 ## Table of Contents
 
-###HTML file:
+   ### HTML file:
    
        *The file includes some changes from the original ( adding time Div to the enteryholderDiv - attaching the js file - adding footer).
        
-   ###CSS file:
+   ### CSS file:
    
       *The file includes changes to cope with the changes in HTML layout of the added fields and setting the layout of the classes.
       
-   ###Two JavaScripts files including:
+   ### Two JavaScripts files including:
    
-   ####app.js:
+   #### app.js:
      
         *The global variables used in the code.
         *All the main functions ( 'updateData' the function of the event listener- 'getData' asunc function to GET Web API Data from OpenWeather website- 
@@ -32,7 +32,7 @@
         *The event listeners ( Mouse click from the user on the 'Generate' button, which will fire the 'updateData' function;which get the zip code and
 	  feelings from the user and post the date, time,temp related to the users entry and the user's feelings).
 	 
-   ####server.js:
+   #### server.js:
    
          *Istall express(), Cors package and body-Parser package.
          *Require express(), and create an instance of the app using express.
